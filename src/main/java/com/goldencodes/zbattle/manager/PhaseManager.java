@@ -3,6 +3,7 @@ package com.goldencodes.zbattle.manager;
 import com.goldencodes.zbattle.ZBattlePlugin;
 import com.goldencodes.zbattle.manager.phase.PreGamePhase;
 import com.goldencodes.zbattle.manager.phase.util.Phase;
+import com.goldencodes.zbattle.util.UtilServer;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.HandlerList;
@@ -37,7 +38,7 @@ public class PhaseManager {
         HandlerList.unregisterAll(currentPhase);
 
         currentPhase = phase;
-        Bukkit.getPluginManager().registerEvents(currentPhase, ZBattlePlugin.getInstance());
+        Bukkit.getPluginManager().registerEvents(currentPhase, UtilServer.getPlugin());
         currentPhase.onEnable();
     }
 

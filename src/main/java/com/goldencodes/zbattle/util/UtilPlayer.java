@@ -1,9 +1,13 @@
 package com.goldencodes.zbattle.util;
 
+import com.goldencodes.zbattle.ZBattlePlugin;
 import net.minecraft.server.v1_8_R3.EntityPlayer;
 import net.minecraft.server.v1_8_R3.EntityTracker;
 import net.minecraft.server.v1_8_R3.EntityTrackerEntry;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -51,5 +55,24 @@ public class UtilPlayer {
         EntityTrackerEntry entry = tracker.trackedEntities.get(target.getEntityId());
 
         return entry.trackedPlayers.contains(ep);
+    }
+
+    private static final String PLUGIN_PREFIX = "§7[§aZBattle§7]";
+
+    public static String translate(String str) {
+        return ChatColor.translateAlternateColorCodes('§', str);
+    }
+
+    public static void tell(Player player, String message) {
+        player.sendMessage(translate(message));
+    }
+
+    public static void tellConsole(String message) {
+        ConsoleCommandSender console = ZBattlePlugin.getInstance().getServer().getConsoleSender();
+        console.sendMessage(translate(message));
+    }
+
+    public static void announceMessage(String message) {
+        Bukkit.getServer().broadcastMessage(translate(message));
     }
 }

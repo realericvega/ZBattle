@@ -66,7 +66,7 @@ public class UtilServer {
 
         for (Player cur : getPlayers()) {
             if (!UtilServer.CallEvent(new PlayerRecieveBroadcastEvent(cur, message)).isCancelled())
-                UtilChat.tell(cur, message);
+                UtilPlayer.tell(cur, message);
         }
     }
 

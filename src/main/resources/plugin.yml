@@ -1,7 +1,7 @@
 name: Zbattle
-version: '${project.version}'
-main: com.goldencodes.zbattle.Zbattle
+version: 1.0.0
+main: com.goldencodes.zbattle.ZBattlePlugin
 api-version: 1.17
 authors: [ GoldenCodes ]
-description: A Mini-Game based off of Ace Of Spades
+description: A Mini-Game based off of 'Ace Of Spades' video game.
 website: twitter.com/realericvega

@@ -8,12 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ZBattlePlugin extends JavaPlugin {
 
-    private final static int MAX_PLAYERS = 32;
-    private final static int MIN_PLAYERS = 8;
-
     private Location spawn;
-
-    private static ZBattlePlugin instance;
 
     private static UserManager userManager;
     private static BlockManager blockManager;
@@ -27,10 +22,6 @@ public final class ZBattlePlugin extends JavaPlugin {
     private void runDiagnosticTests() {
         // This method sends messages to the console whenever a phase is starting, ending, or active
         // If an error has occurred, this method ensures that we know about it
-    }
-
-    public static ZBattlePlugin getInstance() {
-        return instance;
     }
 
     public boolean isSpawnSet() {

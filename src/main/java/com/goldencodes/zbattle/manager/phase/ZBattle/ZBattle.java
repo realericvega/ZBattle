@@ -1,9 +1,12 @@
-package com.goldencodes.zbattle.manager.phase.game;
+package com.goldencodes.zbattle.manager.phase.ZBattle;
 
-import com.goldencodes.zbattle.util.C;
+import com.goldencodes.zbattle.util.chat.C;
 
 public class ZBattle {
 
+    /*
+     * This represents 10 Minutes
+     */
     public static final int MINUTES_IN_GAME = 10 * 60 * 20;
 
     private static final String[] DESCRIPTION =

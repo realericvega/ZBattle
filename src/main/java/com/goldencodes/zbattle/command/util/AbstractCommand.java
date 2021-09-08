@@ -85,11 +85,11 @@ public abstract class AbstractCommand implements CommandExecutor, TabExecutor, I
     }
 
     @Override
-    public abstract void run(CommandSender sender, String[] args);
+    public abstract void Execute(CommandSender sender, String[] args);
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        run(sender, args);
+        Execute(sender, args);
         return false;
     }
 

@@ -1,4 +1,4 @@
-package com.goldencodes.zbattle.util;
+package com.goldencodes.zbattle.util.chat;
 
 import org.bukkit.ChatColor;
 
@@ -48,6 +48,7 @@ public class C {
     public static String cWhiteB = "" + ChatColor.WHITE + "" + ChatColor.BOLD;
     public static String cYellowB = "" + ChatColor.YELLOW + "" + ChatColor.BOLD;
 
+    public static String mHead = " " + ChatColor.BLUE;
     public static String mBody = "" + ChatColor.GRAY;
     public static String mChat = "" + ChatColor.WHITE;
     public static String mElem = "" + ChatColor.YELLOW;
@@ -58,4 +59,15 @@ public class C {
     public static String mLink = "" + ChatColor.GREEN;
     public static String mLoot = "" + ChatColor.RED;
     public static String mGame = "" + ChatColor.LIGHT_PURPLE;
+
+    public static String descHead = "" + ChatColor.DARK_GREEN;
+    public static String descBody = "" + ChatColor.WHITE;
+
+    public static String listTitle = "" + ChatColor.WHITE;
+    public static String listValue = "" + ChatColor.YELLOW;
+    public static String listValueOn = "" + ChatColor.GREEN;
+    public static String listValueOff = "" + ChatColor.RED;
+
+    public static String sysHead = "" + ChatColor.DARK_GRAY;
+    public static String sysBody = "" + ChatColor.GRAY;
 }

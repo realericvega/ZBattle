@@ -3,7 +3,7 @@ package com.goldencodes.zbattle.manager.phase;
 import com.goldencodes.zbattle.ZBattlePlugin;
 import com.goldencodes.zbattle.manager.PhaseManager;
 import com.goldencodes.zbattle.manager.phase.util.Phase;
-import com.goldencodes.zbattle.util.UtilChat;
+import com.goldencodes.zbattle.util.UtilPlayer;
 import org.bukkit.GameMode;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -28,11 +28,11 @@ public class PreGamePhase extends Phase {
     @EventHandler
     public void onPreLogin(AsyncPlayerPreLoginEvent event) {
         if (!ZBattlePlugin.getInstance().isSpawnSet() && !ZBattlePlugin.getUserManager().isHost(event.getUniqueId())) {
-            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, UtilChat.translate("§6You can't join yet!"));
+            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, UtilPlayer.translate("§6You can't join yet!"));
         }
 
         if (ZBattlePlugin.getUserManager().getPlayers().stream().filter(player -> !player.isHost()).count() >= PhaseManager.getMaxPlayers()) {
-            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, UtilChat.translate("§6Game is full!"));
+            event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, UtilPlayer.translate("§6Game is full!"));
         }
     }
 
