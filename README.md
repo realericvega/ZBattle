@@ -1,4 +1,4 @@
-# ZBattle [![Build Status](https://app.travis-ci.com/realericvega/ZBattle.svg?token=ZLdsKzydGpLuphBpAFpx&branch=master)](https://travis-ci.org/Zbattle/ZBattle)
+# ZBattle [![Build Status](https://app.travis-ci.com/realericvega/ZBattle.svg?token=ZLdsKzydGpLuphBpAFpx&branch=master)](https://travis-ci.org/ZBattle/ZBattle)
 
 ## What is HarryPotterSpells? ##
 
