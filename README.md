@@ -6,14 +6,6 @@ This plugin is based off of the "Ace Of Spades" Video Game by Jagex, it allows p
 
 For more information check out our [Bukkit Dev page](http://dev.bukkit.org/server-mods/harrypotterspells).
 
-## The ZBattle Team ##
-
-+ [GoldenCodes](https://www.spigotmc.org/members/goldencodes.476342/): Head Coder
-
-We are looking for more team members to help make this plugin even more awesome. If you are interested just let us know [here](http://forums.bukkit.org/threads/harrypotterspells.149902/) or join our IRC [#zbattle](http://webchat.esper.net/?channels=#harrypotterspells).
-
-To contribute to ZBattle take a look at our [Contributing file](https://github.com/HarryPotterSpells/HarryPotterSpells/blob/master/CONTRIBUTING.md)
-
 ## Other Notes ##
 
 ### Maven ###
