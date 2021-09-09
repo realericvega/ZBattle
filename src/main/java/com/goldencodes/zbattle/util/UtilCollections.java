@@ -27,9 +27,9 @@ public class UtilCollections {
 
     public static <T> T getFirst(List<T> list) { return list.isEmpty() ? null : list.get(0); }
 
-    public static <T> T  getLast(NautArrayList<T> list) { return list.isEmpty ? null : list.get(list.size - 1); }
+    public static <T> T  getLast(NautArrayList<T> list) { return list.isEmpty() ? null : list.get(list.size() - 1); }
 
-    public static <T> T getFirst(NautArrayList<T> list) { return list.isEmpty ? null : list.get(0); }
+    public static <T> T getFirst(NautArrayList<T> list) { return list.isEmpty() ? null : list.get(0); }
 
     public static <E> void forEach(E[] elements, Function<E, E> filter, Consumer<E> consumer) {
 

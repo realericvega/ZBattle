@@ -15,6 +15,6 @@ public class NautHashMap<KeyType, ValueType> {
     public NautHashMap(KeyType[] keys, ValueType[] values) {
         Validate.isTrue(keys.length == values.length, "Keys array and values array must be the same size when making a Map");
 
-        UtilCollections
+        //TODO: Finish this
     }
 }
