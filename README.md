@@ -7,4 +7,4 @@ This plugin is based off of the "Ace Of Spades" Video Game by Jagex, it allows p
 For more information check out our [Bukkit Dev page](http://dev.bukkit.org/server-mods/harrypotterspells).
 
 ### Stats ###
-[![Plugin Metrics for ZBattle](http://i.mcstats.org/HarryPotterSpells/Global+Statistics.png)](http://mcstats.org/plugin/ZBattle)
+[![Plugin Metrics for ZBattle](https://bstats.org/plugin/bukkit/ZBattle/12736)
