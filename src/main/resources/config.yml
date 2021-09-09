@@ -1,0 +1,66 @@
+# [][][][][][][][][][][][][][][][][][][][][]
+#  ZBattle V${project.version} Config
+# [][][][][][][][][][][][][][][][][][][][][]
+# ------------------------------------------
+# There are many placeholders that can now be used withing the config and messages file, placeholders are as followed:
+# - %name% - Replaces with the players name, Example: "Notch".
+# - %displayname% - Replaces with the players display name, Example: "[Owner] Notch".
+# - %uuid% - Replaces with the players UUID.
+# - %crate% - The crate types name.
+# - %prize% - The name of the winning.
+# - %percentage% - Percentage of the winning, useful for "Chance Message".
+# - %rand;100;500% - Generates a random number between two numbers, example is between 100 and 500.
+# ------------------------------------------
+# Don't change the config version!
+
+Config Version: 7
+
+# Plugin Prefix
+Prefix: "&7[&bZBattle&7]"
+
+# Checks if an update is available and notifies staff
+Update Checks: true
+Update Branch: "release"
+
+# Uploads anonymous data about your server, used for general statics
+Metrics: true
+
+Crates:
+
+# Opener which is used by default
+Default Opener: BasicGUI
+
+# Default cooldown between opening crates
+Default Cooldown: 5
+
+# If true it will stop players without the admin perm breaking crates
+Crate Protection: false
+
+# Disable players being allowed to drop keys to other players, putting them in a chest, or even drop them on death
+Disable Key Swapping: false
+
+Chance Message Gap: true
+
+# %crate% can be used to show the crate name
+Default Hologram Text:
+  - "%crate%"
+  - "Right-Click to Open!"
+  - "Left-Click to Preview!"
+
+# What type of storage system to use. Supports FLAT, SQLite, MySQL, Redis, or MongoDB.
+Storage Type: FLAT
+
+# Only required if the above is set to MongoDB
+MongoDB Host:
+MongoDB URI:
+
+# Only required if the above is set to Redis
+Redis Host:
+Redis Port:
+Redis Pass:
+
+# Only required if the above is set to MySQL
+MySQL Host: localhost
+MySQL User: username
+MySQL Pass: password
+MySQL Database: database

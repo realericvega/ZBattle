@@ -24,6 +24,12 @@ public final class ZBattlePlugin extends JavaPlugin {
         // If an error has occurred, this method ensures that we know about it
     }
 
+    public void preInit() {
+        /*
+            This method carries out commands to do while the plugin is launching
+         */
+    }
+
     public boolean isSpawnSet() {
         return true;
     }

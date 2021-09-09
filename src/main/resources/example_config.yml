@@ -1,0 +1,242 @@
+# [][][][][][][][][][][][][][][][][][][][][]
+#  ZBattle V${project.version} Config
+# [][][][][][][][][][][][][][][][][][][][][]
+# ------------------------------------------
+# There are many placeholders that can now be used withing the config and messages file, placeholders are as followed:
+# - %name% - Replaces with the players name, Example: "Notch".
+# - %displayname% - Replaces with the players display name, Example: "[Owner] Notch".
+# - %uuid% - Replaces with the players UUID.
+# - %crate% - The crate types name.
+# - %prize% - The name of the winning.
+# - %percentage% - Percentage of the winning, useful for "Chance Message".
+# - %rand;100;500% - Generates a random number between two numbers, example is between 100 and 500.
+# ------------------------------------------
+# Don't change the config version!
+
+Config Version: 7
+
+# Checks if an update is available and notifies staff
+Update Checks: true
+Update Branch: "spigot"
+
+# Uploads anonymous data about your server, used for general statics
+Metrics: true
+
+Crates:
+  Virtual:
+    Type: VirtualCrate
+    Block: ENDER_CHEST
+    Crates:
+      - Vote
+  Vote:
+    Type: KeyCrate
+    Knockback: 0.5
+    Broadcast: false
+    Firework: false
+    Color: GREEN
+    Block: ENDER_CHEST
+    Preview: true
+    Cooldown: 2
+    Hide Percentages: true
+    Permission: cratesplus.crate.example # Permissions can be anything, it will check that the player has the permission before opening
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: '%type% Crate Key'
+      Enchanted: true
+      Lore:
+        - "This is a Vote key!"
+        - "This is just some &eTEST&r text!"
+    Winnings:
+      '1':
+        Type: ITEM
+        Item Type: IRON_SWORD
+        Item Data: 0
+        Percentage: 25
+        Name: '&6&lSword of Destiny'
+        Amount: 1
+        Enchantments:
+          - DAMAGE_ALL-3
+        Lore:
+          - "Testing123"
+        Flags:
+          - "HIDE_ENCHANTS"
+      '2':
+        Type: ITEM
+        Item Type: DIAMOND_SWORD
+        Name: NONE
+        Item Data: 0
+        Percentage: 25
+        Amount: 1
+        Enchantments:
+          - DAMAGE_ALL-5
+          - DURABILITY-3
+          - FIRE_ASPECT-2
+      '3':
+        Type: COMMAND
+        Item Type: MOB_SPAWNER
+        Percentage: 25
+        Commands:
+          - 'spawner give %name% spider'
+          - 'say %name% opened a crate'
+          - 'say %name% got a random %rand;100;500%'
+        Name: '&e&lSpider Spawner'
+        Item Data: 0
+        Amount: 1
+        Enchantments:
+          - DAMAGE_ALL-5
+          - DURABILITY-3
+          - FIRE_ASPECT-2
+      '4':
+        Type: ITEM
+        Item Type: MONSTER_EGG
+        Percentage: 25
+        Name: '&e&lCreeper Egg'
+        Item Data: 0
+        Entity Type: CREEPER
+        Amount: 3
+  VIP:
+    Type: KeyCrate
+    Knockback: 0.5
+    Broadcast: false
+    Firework: false
+    Color: GREEN
+    Block: CHEST
+    Preview: true
+    Permission: cratesplus.crate.vip # Permissions can be anything, it will check that the player has the permission before opening
+    Key:
+      Item: TRIPWIRE_HOOK
+      Name: '%type% Crate Key'
+      Enchanted: true
+    Hologram Text:
+      - 'This crate will have'
+      - 'Its own hologram text!'
+  FoodSupply:
+    Type: SupplyCrate
+    Block: CHEST
+    Color: LIGHT_PURPLE
+    Minimum: 3
+    Maximum: 6
+    Winnings:
+      '1':
+        Type: COMMAND
+        Commands:
+          - 'heal %name%'
+          - 'tell %name% You have been healed!'
+        Always: true # Makes this reward always happen (Does not count towards the minimum and maximum)
+      '2':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 5
+        Percentage: 10
+      '3':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 10
+        Percentage: 10
+      '4':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 3
+        Percentage: 20
+      '5':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 5
+        Percentage: 20
+      '6':
+        Type: ITEM
+        Item Type: APPLE
+        Amount: 12
+        Percentage: 20
+      '7':
+        Type: ITEM
+        Item Type: COOKED_BEEF
+        Amount: 32
+        Percentage: 15
+      '8':
+        Type: ITEM
+        Item Type: COOKED_BEEF
+        Amount: 64
+        Percentage: 5
+  MysteryCrate:
+    Type: MysteryCrate
+    Block: ENDER_CHEST
+    Icon: ENDER_CHEST
+    GUI Title: "My Secret Boxes"
+    Item Title: "Secret Box"
+    Lore:
+      - "Click to open this crate!"
+    Color: GREEN
+    Winnings:
+      '1':
+        Type: COMMAND
+        Commands:
+          - 'heal %name%'
+          - 'tell %name% You have been healed!'
+        Always: true # Makes this reward always happen
+      '2':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 5
+        Percentage: 10
+      '3':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 10
+        Percentage: 10
+      '4':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 3
+        Percentage: 20
+      '5':
+        Type: ITEM
+        Item Type: COOKED_CHICKEN
+        Amount: 5
+        Percentage: 20
+      '6':
+        Type: ITEM
+        Item Type: APPLE
+        Amount: 12
+        Percentage: 20
+      '7':
+        Type: ITEM
+        Item Type: COOKED_BEEF
+        Amount: 32
+        Percentage: 15
+      '8':
+        Type: ITEM
+        Item Type: COOKED_BEEF
+        Amount: 64
+        Percentage: 5
+
+# Opener which is used by default
+Default Opener: BasicGUI
+
+# Default cooldown between opening crates
+Default Cooldown: 5
+
+# If true it will stop players without the admin perm breaking crates
+Crate Protection: false
+
+# Disable players being allowed to drop keys to other players, putting them in a chest, or even drop them on death
+Disable Key Swapping: false
+
+# %crate% can be used to show the crate name
+# If a crate has no specific hologram text set, this will be shown
+Default Hologram Text:
+  - "%crate%"
+  - "Right-Click to Open!"
+  - "Left-Click to Preview!"
+
+# Delay in seconds after player joins, default is no delay
+Claim Message Delay: 2
+
+# What type of storage system to use. Supports FLAT, SQLite or MySQL.
+Storage Type: FLAT
+
+# Only required if the above is set to MySQL
+MySQL Host: localhost
+MySQL User: username
+MySQL Pass: password
+MySQL Database: database

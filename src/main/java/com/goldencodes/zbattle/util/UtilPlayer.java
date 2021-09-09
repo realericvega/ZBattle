@@ -68,7 +68,7 @@ public class UtilPlayer {
     }
 
     public static void tellConsole(String message) {
-        ConsoleCommandSender console = ZBattlePlugin.getInstance().getServer().getConsoleSender();
+        ConsoleCommandSender console = UtilServer.getPlugin().getServer().getConsoleSender();
         console.sendMessage(translate(message));
     }
 

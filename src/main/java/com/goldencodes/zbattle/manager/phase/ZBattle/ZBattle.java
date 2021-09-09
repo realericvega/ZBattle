@@ -16,4 +16,8 @@ public class ZBattle {
                     "",
                     C.cYellow + "The last team left alive wins!"
             };
+    
+    public ZBattle() {
+
+    }
 }
