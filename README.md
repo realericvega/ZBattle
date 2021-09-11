@@ -4,7 +4,7 @@
 
 This plugin is based off of the "Ace Of Spades" Video Game by Jagex, it allows players to join one of two teams, either the Zombie, or Survivor team, each team has different classes, abilities, and objectives. You can view the Plugin Metrics stats page [here](http://mcstats.org/plugin/ZBattle).
 
-For more information check out our [Spigot Page]().
+For more information check out the [Spigot Page]().
 
 ### Stats ###
 [Plugin Metrics for ZBattle](https://bstats.org/plugin/bukkit/ZBattle/12736)
