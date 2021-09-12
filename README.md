@@ -9,5 +9,5 @@ For more information check out the [Spigot Page]().
 ### Stats ###
 [Plugin Metrics for ZBattle](https://bstats.org/plugin/bukkit/ZBattle/12736)
 
-##Note
+## Note ##
 `Under Development!`
